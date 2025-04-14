@@ -53,7 +53,7 @@ def main():
 ### 1. Ter o Python instalado na máquina
 
 ### 2. Clone o repositório
-git clone https://github.com/
+git clone [https://github.com/](https://github.com/gabsant07/CaminhoHamiltoniano)
 
 ### 3. Execute o código
 python main.py
@@ -79,6 +79,18 @@ Onde a>= 1, b > 1 e f(n) é função polinomial.
 
 O algoritmo do Caminho Hamiltoniano não possui esse formato de recorrência, pois a recursão não divide o problema em subproblemas menores com proporção fixa. Em vez disso, ele gera uma árvore de possibilidades baseada em permutações, característica típica de problemas combinatórios e não estruturados para o Teorema Mestre.
 
+### Análise dos casos de complexidade
+1. Pior caso: Nenhum caminho Hamiltoniano é encontrado. O algoritmo tenta todas as possibilidades.
+Complexidade: O(n!).
 
+Caso médio: Encontra um caminho após explorar uma fração das possibilidades.
+Complexidade: Menor que O(n!), mas ainda exponencial.
 
+Melhor caso: O primeiro caminho testado já é Hamiltoniano.
+Complexidade: O(n).
 
+2. No melhor caso, o desempenho é muito bom e rápido.
+
+No pior caso, o tempo explode exponencialmente, tornando o algoritmo impraticável para grafos com muitos vértices.
+
+O algoritmo é viável apenas para grafos pequenos (até cerca de 10 vértices).
